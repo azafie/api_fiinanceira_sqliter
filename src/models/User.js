@@ -47,7 +47,7 @@ User.init({
   updatedAt: 'updated_at',
   hooks: {
     beforeCreate: async (user) => {
-      console.log('DEBUG: Hook beforeCreate executando para user:', user.email);
+    
       
       // ⚠️ IMPORTANTE: O campo 'password' não existe mais no model
       // O auth.service.js deve passar 'password_hash' diretamente
