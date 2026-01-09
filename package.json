@@ -1,0 +1,32 @@
+{
+  "name": "finance-api",
+  "version": "1.0.0",
+  "description": "API Financeira com autenticação JWT",
+  "author": "Emerson Oliveira",
+  "license": "ISC",
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "npx sequelize-cli db:migrate --config config/cli.config.js",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo --config config/cli.config.js",
+    "seed": "npx sequelize-cli db:seed:all --config config/cli.config.js",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all --config config/cli.config.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}
